@@ -14,6 +14,7 @@
 		D1A8C71326CEA5AF001BF967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A8C71226CEA5AF001BF967 /* Assets.xcassets */; };
 		D1A8C71626CEA5AF001BF967 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A8C71426CEA5AF001BF967 /* LaunchScreen.storyboard */; };
 		D1A8C71E26CEA5F8001BF967 /* Extra Code.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A8C71D26CEA5F8001BF967 /* Extra Code.swift */; };
+		D1A8C72026CEA6C8001BF967 /* WhackAMole.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D1A8C71F26CEA6C8001BF967 /* WhackAMole.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D1A8C71526CEA5AF001BF967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A8C71726CEA5AF001BF967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A8C71D26CEA5F8001BF967 /* Extra Code.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extra Code.swift"; sourceTree = "<group>"; };
+		D1A8C71F26CEA6C8001BF967 /* WhackAMole.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = WhackAMole.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +63,9 @@
 				D1A8C70926CEA5AE001BF967 /* AppDelegate.swift */,
 				D1A8C70B26CEA5AE001BF967 /* SceneDelegate.swift */,
 				D1A8C70D26CEA5AE001BF967 /* ViewController.swift */,
-				D1A8C71D26CEA5F8001BF967 /* Extra Code.swift */,
 				D1A8C70F26CEA5AE001BF967 /* Main.storyboard */,
+				D1A8C71D26CEA5F8001BF967 /* Extra Code.swift */,
+				D1A8C71F26CEA6C8001BF967 /* WhackAMole.pdf */,
 				D1A8C71226CEA5AF001BF967 /* Assets.xcassets */,
 				D1A8C71426CEA5AF001BF967 /* LaunchScreen.storyboard */,
 				D1A8C71726CEA5AF001BF967 /* Info.plist */,
@@ -129,6 +132,7 @@
 			files = (
 				D1A8C71626CEA5AF001BF967 /* LaunchScreen.storyboard in Resources */,
 				D1A8C71326CEA5AF001BF967 /* Assets.xcassets in Resources */,
+				D1A8C72026CEA6C8001BF967 /* WhackAMole.pdf in Resources */,
 				D1A8C71126CEA5AE001BF967 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
