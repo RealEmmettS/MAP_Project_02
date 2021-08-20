@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     var screenWidth = CGFloat()
     var screenHeight = CGFloat()
     
+    var gameboardSize = CGRect()
     
+    
+    //MARK:- Start of ViewDidLod
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +37,8 @@ class ViewController: UIViewController {
         //MARK: Gameboard Setup
         gameboard.backgroundColor = UIColor.green
         gameboard.text = ""
+        gameboardSize = gameboard.bounds
+        print("Gameboard Width: \(gameboardSize.width)\nGameboard Height: \(gameboardSize.height)")
         
         //MARK: Mole Setup
         let centerX = gameboard.center.x
@@ -43,9 +48,25 @@ class ViewController: UIViewController {
         mole.backgroundColor = UIColor.brown
         //mole.center = gameboard.center
         
+        
+        
+//        let label = UILabel()
+//        label.frame = CGRect(x: view.center.x, y: view.center.y, width: 50, height: 50)
+//        label.text = "test"
+//        label.backgroundColor = .black
+//        view.addSubview(label)
+
+        
     }
+    //MARK:- End of ViewDidLod
     
 
+    
+    
+    
+    
+    
+    //MARK: Mole Pressed
     @IBAction func molePressed(_ sender: Any) {
         
         // Find the button's width and height
@@ -53,9 +74,8 @@ class ViewController: UIViewController {
         let moleHeight = mole.frame.height
 
         // Find the width and height of the enclosing view
-        let gameboardSize = gameboard.bounds
-        let viewWidth = gameboardSize.width-20
-        let viewHeight = gameboardSize.height-20
+        let viewWidth = gameboardSize.width
+        let viewHeight = gameboardSize.height
 
         // Compute width and height of the area to contain the button's center
         let xwidth = viewWidth - moleWidth
@@ -71,10 +91,11 @@ class ViewController: UIViewController {
         
         
     }
+    //MARK:- End Mole Pressed
     
     
     
 
 
-}
+}//End of class
 
