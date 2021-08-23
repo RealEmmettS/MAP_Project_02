@@ -36,6 +36,12 @@
                                     <action selector="molePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1G-j4-j2K"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR9-Nk-9oy">
+                                <rect key="frame" x="322" y="67" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -43,15 +49,18 @@
                             <constraint firstItem="UmN-bc-aDQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2fg-6v-ye7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JcS-AM-q6h" secondAttribute="trailing" priority="750" constant="20" id="3ks-A5-0nd"/>
                             <constraint firstItem="JcS-AM-q6h" firstAttribute="top" secondItem="UmN-bc-aDQ" secondAttribute="bottom" constant="55" id="90r-uL-TgZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uR9-Nk-9oy" secondAttribute="trailing" constant="20" id="PNY-06-aSX"/>
                             <constraint firstItem="UmN-bc-aDQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="RF7-Qr-LL1"/>
                             <constraint firstItem="JcS-AM-q6h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="750" constant="20" id="dV3-9p-C5W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JcS-AM-q6h" secondAttribute="bottom" constant="20" id="qdV-wp-1iN"/>
+                            <constraint firstItem="uR9-Nk-9oy" firstAttribute="centerY" secondItem="UmN-bc-aDQ" secondAttribute="centerY" id="sTR-QG-WR3"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gameboard" destination="JcS-AM-q6h" id="A4y-h0-hHB"/>
                         <outlet property="mole" destination="Yhb-ts-lGO" id="dH7-Wl-LWu"/>
                         <outlet property="scoreText" destination="UmN-bc-aDQ" id="qWt-hE-qFK"/>
+                        <outlet property="time" destination="uR9-Nk-9oy" id="ptw-75-1Cd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
