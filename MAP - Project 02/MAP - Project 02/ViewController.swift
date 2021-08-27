@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     var gameboardSize = CGRect()
     
     var restarting = false
+    var gameOver = false
     
     var gameTimer = Timer()
     
@@ -31,6 +32,7 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var tappableView: UIView!
     
     //MARK:- Start of ViewDidLod
     override func viewDidLoad() {
@@ -70,6 +72,8 @@ class ViewController: UIViewController {
         //mole.center = gameboard.center
 
         
+        gameOver = false
+        
         
         
     }
@@ -88,7 +92,9 @@ class ViewController: UIViewController {
         let instructions = """
             Welcome to Whack-A-Mole, CTE edition!
             
-            The goal of this game is to get as many points as possible within the alloted amount of time. The default time is 10 seconds. To gain a point, find and click the mole.
+            The goal of this game is to get as many points as possible within the alloted amount of time. The default time is 10 seconds.
+            
+            To gain a point, find and click the mole. If you miss and touch the gameboard instead, one point will be deducted from your total score.
             
             At the end of the game, shake your device to restart.
             
@@ -129,12 +135,29 @@ class ViewController: UIViewController {
                 self.mole.isHidden = true
                 self.scoreText.textColor = .red
                 self.gameboard.backgroundColor = .darkGray
+                self.gameOver = true
                 timer.invalidate()
             }
 
         }//End of Timer
     }//End of restartTimer
     
+    
+    //MARK: Gameboard Pressed
+    @IBAction func gameboardTapped(_ sender: Any) {
+        //print("tapped screen")
+        switch gameOver{
+        case true:
+            print("Game over. No points deducted")
+        default:
+            if score > 0{
+                score -= 1
+            }else{
+                print("Score is 0. No points deducted")
+            }
+        }
+        
+    }
     
     
     
@@ -237,7 +260,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    //MARK: Reset Game
     func reset(){
         
         print("\n\n\n")
@@ -254,6 +277,7 @@ class ViewController: UIViewController {
         //Score Setup
         score = 0;
         scoreText.textColor = .black
+        gameOver = false
         
         //Timer Setup
         time.text = "Time Left: 10"
